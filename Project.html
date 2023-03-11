@@ -32,10 +32,80 @@
 <body>
   <form>
     <!--insert html tags -->
-
-    <button type="button" onclick="calcGPA()">Calculate GPA</button>
-
+    <label for="overallGPA">Overall GPA :</label>
+    <input type="number" step="0.01" max="4.0" min="0.0" id="overallGPA" maxlength="4" size="5" minlength="3" autofocus>
+    <br><br>
+    <label for="last30GPA">Last 30 GPA :</label>
+    <input type="number" step="0.01" max="4.0" min="0.0" id="last30GPA" maxlength="4" size="5" minlength="3" autofocus>
+    <br><br>
+    <label for="acc200Grade"> acc200Grade
+      <select id="acc200Grade">
+        <option type="number" value="4">A</option>
+        <option type="number" value="3.7">A-</option>
+        <option type="number" value="3.4">B+</option>
+        <option type="number" value="3.0">B</option>
+        <option type="number" value="2.7">B-</option>
+        <option type="number" value="2.4">C+</option>
+        <option type="number" value="2.0">C</option>
+        <option type="number" value="1.7">C-</option>
+        <option type="number" value="1.4">D+</option>
+        <option type="number" value="1.0">D</option>
+        <option type="number" value="0.7">D-</option>
+        <option type="number" value="0.0">E</option>
+      </select>
+    </label>
+    <br><br>
+    <label for="is201Grade"> is201Grade
+      <select id="is201Grade">
+        <option type="number" value="4">A</option>
+        <option type="number" value="3.7">A-</option>
+        <option type="number" value="3.4">B+</option>
+        <option type="number" value="3.0">B</option>
+        <option type="number" value="2.7">B-</option>
+        <option type="number" value="2.4">C+</option>
+        <option type="number" value="2.0">C</option>
+        <option type="number" value="1.7">C-</option>
+        <option type="number" value="1.4">D+</option>
+        <option type="number" value="1.0">D</option>
+        <option type="number" value="0.7">D-</option>
+        <option type="number" value="0.0">E</option>
+      </select>
+    </label>
+    <br>
+    <br>
+    <label for="is303Grade"> is303Grade
+      <select id="is303Grade">
+        <option type="number" value="4">A</option>
+        <option type="number" value="3.7">A-</option>
+        <option type="number" value="3.4">B+</option>
+        <option type="number" value="3.0">B</option>
+        <option type="number" value="2.7">B-</option>
+        <option type="number" value="2.4">C+</option>
+        <option type="number" value="2.0">C</option>
+        <option type="number" value="1.7">C-</option>
+        <option type="number" value="1.4">D+</option>
+        <option type="number" value="1.0">D</option>
+        <option type="number" value="0.7">D-</option>
+        <option type="number" value="0.0">E</option>
+      </select>
+    </label>
+    <br>
+    <br>
+    <label for="essay"> essay
+      <select id="essay">
+        <option type="number" value="1">1</option>
+        <option type="number" value="2">2</option>
+        <option type="number" value="3">3</option>
+        <option type="number" value="4">4</option>
+      </select>
+    </label>
+    <br>
+    <br>
+    <div id="coreGPA">
+      <button type="button" onclick="calcGPA()">Calculate GPA</button>
+    </div>
     <!--insert html tag for displaying the calcualted GPA -->
+
   </form>
 </body>
 
