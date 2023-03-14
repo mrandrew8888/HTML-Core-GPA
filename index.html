@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="https://www.adelaide.edu.au/student/careers/sites/default/files/styles/ua_image/public/media/images/2021-02/gpa-engineering-135590-companylogo.jpg?itok=8oi6fbMk" />
+        <title>BYU Information Systems GPA Calcuator</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script>
+            //This function is called when the user clicks on the calcGPA button
+            function calcGPA() {
+            //Extract the values from the HTML inputs by their assigned id and assigns them to variables
+            //The value extracted is converted from a string to a float/decimal
+            fIS201 = parseFloat(document.getElementById("is201Grade").value);
+            fACC200 = parseFloat(document.getElementById("acc200Grade").value);
+            fIS303 = parseFloat(document.getElementById("is303Grade").value);
+            fOverallGPA = parseFloat(document.getElementById("overallGPA").value);
+            fLast30GPA = parseFloat(document.getElementById("last30GPA").value);
+            fEssay = parseInt(document.getElementById("essay").value);
+
+            //calculates new gpa
+            fFinalGPA = ((fIS201 * .3) + (fIS303 * .3) + (fACC200 * .05) + (fOverallGPA * .12) + (fLast30GPA * .18) + (fEssay * .05)).toFixed(2);
+
+            //Display the calculated GPA to the HTML label named "coreGPA"
+            document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA;
+            }
+        </script>
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">IS 303 Project</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#!">BYU Marriot School of Business</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">GPA CALCULATOR</h1>
+                    <h2 class="masthead-subheading mb-0">Determine your GPA to apply to the IS Program!</h2>
+                    <a target="_blank" class="btn btn-primary btn-xl rounded-pill mt-5" href="https://marriott.byu.edu/infosys/">Program Information</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+        <!-- Content section 1-->
+        <section style="background-color: rgb(255, 255, 255)">
+            <form>
+                <!--insert html tags -->
+                
+                <br><br>
+                <br><br>
+                <label for="overallGPA">Overall GPA :</label>
+                <input type="number" step="0.01" max="4.0" min="0.0" id="overallGPA" maxlength="4" size="5" minlength="3" autofocus>
+                <br><br>
+                <label for="last30GPA">Last 30 GPA :</label>
+                <input type="number" step="0.01" max="4.0" min="0.0" id="last30GPA" maxlength="4" size="5" minlength="3" autofocus>
+                <br><br>
+                <label for="acc200Grade"> acc200Grade
+                  <select id="acc200Grade">
+                    <option type="number" value="4">A</option>
+                    <option type="number" value="3.7">A-</option>
+                    <option type="number" value="3.4">B+</option>
+                    <option type="number" value="3.0">B</option>
+                    <option type="number" value="2.7">B-</option>
+                    <option type="number" value="2.4">C+</option>
+                    <option type="number" value="2.0">C</option>
+                    <option type="number" value="1.7">C-</option>
+                    <option type="number" value="1.4">D+</option>
+                    <option type="number" value="1.0">D</option>
+                    <option type="number" value="0.7">D-</option>
+                    <option type="number" value="0.0">E</option>
+                  </select>
+                </label>
+                <br><br>
+                <label for="is201Grade"> is201Grade
+                  <select id="is201Grade">
+                    <option type="number" value="4">A</option>
+                    <option type="number" value="3.7">A-</option>
+                    <option type="number" value="3.4">B+</option>
+                    <option type="number" value="3.0">B</option>
+                    <option type="number" value="2.7">B-</option>
+                    <option type="number" value="2.4">C+</option>
+                    <option type="number" value="2.0">C</option>
+                    <option type="number" value="1.7">C-</option>
+                    <option type="number" value="1.4">D+</option>
+                    <option type="number" value="1.0">D</option>
+                    <option type="number" value="0.7">D-</option>
+                    <option type="number" value="0.0">E</option>
+                  </select>
+                </label>
+                <br>
+                <br>
+                <label for="is303Grade"> is303Grade
+                  <select id="is303Grade">
+                    <option type="number" value="4">A</option>
+                    <option type="number" value="3.7">A-</option>
+                    <option type="number" value="3.4">B+</option>
+                    <option type="number" value="3.0">B</option>
+                    <option type="number" value="2.7">B-</option>
+                    <option type="number" value="2.4">C+</option>
+                    <option type="number" value="2.0">C</option>
+                    <option type="number" value="1.7">C-</option>
+                    <option type="number" value="1.4">D+</option>
+                    <option type="number" value="1.0">D</option>
+                    <option type="number" value="0.7">D-</option>
+                    <option type="number" value="0.0">E</option>
+                  </select>
+                </label>
+                <br>
+                <br>
+                <label for="essay"> essay
+                  <select id="essay">
+                    <option type="number" value="1">1</option>
+                    <option type="number" value="2">2</option>
+                    <option type="number" value="3">3</option>
+                    <option type="number" value="4">4</option>
+                  </select>
+                </label>
+                <br>
+                <br>
+                <div>
+                  <button class="button-29" role="button" onclick="calcGPA()" >Calculate GPA</button>
+                  <p id="coreGPA"></p>
+                </div>
+                <!--insert html tag for displaying the calcualted GPA -->
+                <br><br>
+                <br><br>
+              </form>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; BYU IS 303</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
